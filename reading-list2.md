@@ -1,5 +1,5 @@
 ---
-title: Project.1
+title: Project.2
 subtitle: I will begin my project.
 layout: "page"
 icon: fa-book
