@@ -3,7 +3,7 @@ title: Project.2
 subtitle: I will begin my project.
 layout: "page"
 icon: fa-book
-order: 5
+order: 4
 ---
 
 I love books! Here are some I'm reading now:
