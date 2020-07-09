@@ -3,8 +3,27 @@ title: Fourth Post
 author: Chris
 layout: post
 ---
-[TOC]
+블라블라
 
+#!/usr/bin/env ruby
+
+require 'uri'
+
+fileName = ARGV[0]
+fileName = "README.md" if !fileName
+
+File.open(fileName, 'r') do |f|
+  inside_code_snippet = false
+  f.each_line do |line|
+    forbidden_words = ['Table of contents', 'define', 'pragma']
+    inside_code_snippet = !inside_code_snippet if line.start_with?('```')
+    next if !line.start_with?("#") || forbidden_words.any? { |w| line =~ /#{w}/ } || inside_code_snippet
+
+    title = line.gsub("#", "").strip
+    href = URI::encode title.gsub(" ", "-").downcase
+    puts "  " * (line.count("#")-1) + "* [#{title}](\##{href})"
+  end
+end
 
 # Table of Contents
 1. [이거나!!](#이거나!!)
@@ -18,13 +37,13 @@ layout: post
 
 
 
-#### 이거나!!
+
 Lorem ipsum dolor sit amet, harum malorum nominavi mea et. Atqui maluisset duo cu, summo dignissim voluptatum sit ut. Ad quo quidam delicatissimi. Cum nihil noster patrioque id. Per at maiorum definitiones. Cu vix sint aliquip. No duo alia sale persecuti.
 
 Pri id consul meliore luptatum, vix iudico impetus salutatus eu, duo at causae admodum complectitur. Qui eu salutandi dignissim, ea dictas audire commodo eos, vim cu autem dicam. Novum placerat moderatius sea ex, debet labitur reprehendunt mei ad. Tempor theophrastus et est, id tollit ponderum usu, at vis consul detraxit. Sit ut adhuc aeque.
 
 Ut eum labore antiopam. Cum eu modus rationibus. Illud deleniti cum cu. At vix illum vitae tation, solet oporteat complectitur at vel. Vim te simul eleifend, et per insolens conceptam, ad sint posidonium est. Ad vocent propriae principes duo.
-
+#### 이거나!!
 Audire periculis id vis, cum eu sonet option patrioque, his dicam sanctus imperdiet ad. Ad sonet dolorum est. Eu dolore adipisci volutpat mei, eu nec nisl molestiae. Usu ad veri omnesque pertinacia, duis scripserit ad nam. Quo id eligendi legendos.
 ### 이거나1
 Eos cu partiendo vituperatoribus. Mel id duis delenit atomorum, mei tamquam nostrum ne, id eum hinc decore mediocrem. Mei feugiat habemus tincidunt ut, atqui detraxit ex usu. Vix ad commodo eripuit alienum, an has idque delicatissimi. Dolores reformidans mel ne, duis numquam disputando quo te.
