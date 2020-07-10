@@ -9,7 +9,7 @@ order: 3
 # Table of Contents
 
 1. [Python](#Python)
-   1. [DP](#DP)
+2. [DP](#DP)
 
 
 
