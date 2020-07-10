@@ -1,13 +1,22 @@
 ---
-title: Project.2
+title: Algorithm
 subtitle: I will begin my project.
 layout: "page"
 icon: fa-book
-order: 4
+order: 3
 ---
 
+# Table of Contents
+
+1. [Python](#Python)
+   1. [무식하게 풀기](#무식하게 풀기)
+
+
+
+### Python
 I love books! Here are some I'm reading now:
 
+#### 무식하게 풀기
 1. Robert Burton: *The Anatomy of Melancholy*
 2. Robert Musil: *The Man Without Qualities*
 3. Kazuo Ishiguro: *The Unconsoled*
