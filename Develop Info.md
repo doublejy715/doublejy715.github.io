@@ -1,5 +1,5 @@
 ---
-title: Develop Info
+title: Develop info
 subtitle: I will begin my project.
 layout: "page"
 icon: fa-book
