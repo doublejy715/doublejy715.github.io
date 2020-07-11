@@ -1,12 +1,11 @@
 ---
-title: Project.2
+title: News
 subtitle: I will begin my project.
 layout: "page"
 icon: fa-book
-order: 5
+order: 4
 ---
 
-두번째 입니다.
 I love books! Here are some I'm reading now:
 
 1. Robert Burton: *The Anatomy of Melancholy*

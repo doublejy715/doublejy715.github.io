@@ -1,5 +1,5 @@
 ---
-title: First Post
+title: Diary
 author: Chris
 layout: post
 ---

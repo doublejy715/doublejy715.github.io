@@ -1,5 +1,5 @@
 ---
-title: Second Post
+title: Books
 author: Chris
 layout: post
 ---

@@ -1,13 +1,21 @@
 ---
-title: Project.1
+title: Develop Info
 subtitle: I will begin my project.
 layout: "page"
 icon: fa-book
-order: 6
+order: 3
 ---
 
-두번째 입니다.
+# Table of Contents
+
+1. [Python](#Python)
+2. [DP](#DP)
+
+
+
+### Python
 I love books! Here are some I'm reading now:
+
 
 1. Robert Burton: *The Anatomy of Melancholy*
 2. Robert Musil: *The Man Without Qualities*
@@ -20,4 +28,8 @@ I love books! Here are some I'm reading now:
 9. Karl Marx: *Capital*
 10. James Woodforde: *The Diary of A Country Parson*
 
+
+
+#### DP
+블라블라블라블라블라
 source: [The Guardian](https://www.theguardian.com/books/booksblog/2011/jan/04/best-boring-books)
