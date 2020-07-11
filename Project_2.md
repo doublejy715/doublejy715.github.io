@@ -3,7 +3,7 @@ title: Project.2
 subtitle: I will begin my project.
 layout: "page"
 icon: fa-book
-order: 5
+order: 6
 ---
 
 두번째 입니다.

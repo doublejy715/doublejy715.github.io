@@ -3,7 +3,7 @@ title: Algorithm
 subtitle: I will begin my project.
 layout: "page"
 icon: fa-book
-order: 3
+order: 4
 ---
 
 # Table of Contents
