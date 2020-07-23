@@ -12,7 +12,7 @@ order: 3
     1. [Graph도입](#Graph도입)
 
 
-# 1. Graph
+# [1] Graph
 ## 1.1 Graph도입
 ### 1. graph의 정의
 
