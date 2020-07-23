@@ -87,11 +87,44 @@ order: 3
 	인접 리스트 표현의 단점 : 간선 (u,v)가 존재하는지 확인하기 위해서는 연결 리스트 adjacency_list[u]의 모든 원소를 일일이 확인해야 합니다.
 	
 ## [2] DFS(깊이 우선 탐색)
-### 1. DFS도입
+### 2.1 DFS도입
 트리의 순회와 같이 그래프의 모든 정점들을 특정한 순서에 따라 방문하는 알고리즘들을 그래프의 탐색(search) 알고리즘이라고 합니다. 그래프는 트리보다 구조가. 훨씬 복잡할 수 있기 떄문에 탐색 과정에서 얻어지는 정보가 아주 중요합니다. 탬색 과정에서 어떤 간선이 사용되었는지, 또 어떤 순서로 정점들이 방문되었는지를 통해 그래프의 구조를 알 수 있습니다.
 
 과정 : 그래프의 모든 정점을 발견하는 가장 단순하고 고전적인 방법입니다. 현재 정점과 인접한 간선들을 하나씩 검사하다가, 아직 방문하지 않은 정점으로 향하는 간선이 있다면 그 간선을 무조건 따라가는 것이다. 이 과정에서 더이상 갈 곳이 없는 막힌 정점에 도달하면 포기하고, 마지막에 따라왔던 간선을 따라 뒤로 돌아갑니다.
 
 깊이 우선 탐색은 탐색의 각 과정에서 가능한 한 그래프 안으로 '깊이' 들어가려고 시도하며, 막힌 정점에 도달하지 않는 한 뒤로 돌아가지 않습니다.
 
-### 2. DFS의 구현
+### 2.2 DFS의 구현
+DFS는 주로 2가지 방법으로 구현됩니다. 첫번째는 stack(스택)을 이용한 방법, 두번쨰는 재귀 호출을 이용한 방법이 존재합니다.
+
+#### 1. stack을 이용한 방법
+```
+def DFS(graph, root):
+	visited = []
+	stack = [root]
+	
+	while stack:								# stack이 빌때 까지 탐색 진행
+		vertex = stack.pop()
+		if vertex not in visited :
+			visited.append(vertex)				# 방문 여부를 검색
+			stack.extend(graph[vertex] - visited)	# 방문하지 않은 vertex를 stack에 저장
+	
+	return visited
+```
+
+#### 2. 재귀 호출을 이용한 방법
+```
+def DFS_recursive(graph, root, visited=None):
+	if visited is None:							# 만약 처음 시작한다면 visited 형성
+		visited = set() 							# 반복 방문할 수 있으므로 set으로 visited 지정
+
+	visited.add(root)	
+	
+	for node in graph[root] - visited :				#  방문하지 않은 vertex에 한해서 node들을 방문한다.
+		DFS_recursive(graph, node, visited)
+		
+	return visited
+```
+**Q. stack 과 재귀 호출을 적재적소에 사용하는 방법은?**
+
+
